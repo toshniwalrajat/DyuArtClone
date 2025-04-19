@@ -1,0 +1,138 @@
+.menu-section {
+    background-color: #fef9ed;
+    padding: 4rem 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .menu-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .menu-text-box {
+    background-color: #fdeedc;
+    padding: 2rem;
+    border-radius: 24px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  .menu-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .menu-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .menu-item p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+    color: #555;
+  }
+  
+  .item-price {
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+  }
+  
+  .menu-image-box {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 540px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .menu-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .img-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #fff8ed;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .menu-wrapper {
+      gap: 2rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .menu-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-text-box,
+    .menu-image-box {
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .menu-image-box {
+      order: 1;
+    }
+  
+    .menu-text-box {
+      order: 2;
+    }
+  
+    .menu-heading {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .menu-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .item-price {
+      align-self: flex-end;
+      margin-top: 0.3rem;
+    }
+  }
+  

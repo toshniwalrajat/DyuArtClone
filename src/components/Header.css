@@ -1,0 +1,261 @@
+/* src/components/Header.css */
+
+/* --- Base Header Styles --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #fdfbf5;
+  border-bottom: 1px solid transparent;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Header When Scrolled --- */
+.header.scrolled {
+  background-color: rgba(253, 251, 245, 0.85);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- Remove blur when mobile menu is open --- */
+.header.mobile-menu-active {
+  background-color: #fdfbf5;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* --- Logo Styles --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* --- Desktop Navigation --- */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-left: 25px;
+  text-decoration: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: color 0.2s ease;
+  border: none;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Desktop Order Button --- */
+.order-button {
+  margin-left: 30px;
+  padding: 10px 20px;
+  background-color: #f4eada;
+  border: 1px solid #d3c0a0;
+  border-radius: 25px;
+  cursor: pointer;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+  text-decoration: none; /* ✅ Prevent underline */
+}
+
+.order-button:hover {
+  background-color: #e9dcc8;
+}
+
+/* --- Mobile Elements Hidden by Default --- */
+.mobile-menu-toggle,
+.mobile-nav,
+.mobile-menu-close {
+  display: none;
+}
+
+/* --- Mobile Specific Styling --- */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo-image {
+    height: 70px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+    z-index: 1011;
+    padding: 0 5px;
+    margin-left: auto;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fdf1dc;
+    z-index: 1010;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-logo {
+    height: 70px;
+    width: auto;
+  }
+
+  .mobile-menu-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: black;
+    cursor: pointer;
+    box-shadow: none;
+    appearance: none;
+  }
+
+  .mobile-nav-links {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .mobile-nav .nav-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-nav .order-button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #f4eada;
+    border: 1px solid #d3c0a0;
+    border-radius: 9999px;
+    align-self: flex-start;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .mobile-nav .order-button:hover {
+    background-color: #e9dcc8;
+  }
+
+  .mobile-nav-bottom,
+  .mobile-nav-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 18px;
+    z-index: 1100;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .social-icons svg {
+    height: 25px;
+    width: 25px;
+    color: black;
+    cursor: pointer;
+  }
+
+  .whatsapp-float,
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 55px;
+    width: 55px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+  .whatsapp-icon img,
+  .whatsapp-float img {
+    height: 28px;
+    width: 28px;
+  }
+}
