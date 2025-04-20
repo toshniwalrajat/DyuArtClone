@@ -86,7 +86,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   transition: background-color 0.2s ease;
-  text-decoration: none; /* ✅ Prevent underline */
+  text-decoration: none;
 }
 
 .order-button:hover {
@@ -114,16 +114,25 @@
     display: none;
   }
 
-  .mobile-menu-toggle {
-    display: block;
+  /* --- Custom Hamburger Icon --- */
+  .custom-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
     background: none;
     border: none;
-    font-size: 2rem;
+    padding: 8px;
     cursor: pointer;
-    color: black;
     z-index: 1011;
-    padding: 0 5px;
     margin-left: auto;
+  }
+
+  .custom-hamburger .bar {
+    width: 36px;
+    height: 4px;
+    background-color: #2d1b00; /* Dark brown */
+    border-radius: 2px;
   }
 
   .mobile-nav {
@@ -199,29 +208,28 @@
     margin-top: 30px;
     padding: 12px 28px;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: bold;
     background-color: #f4eada;
     border: 1px solid #d3c0a0;
-    border-radius: 9999px;
-    align-self: flex-start;
-    color: black;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    color: black;
+    font-family: Arial, sans-serif;
     text-decoration: none;
+    transition: background-color 0.2s ease;
   }
 
   .mobile-nav .order-button:hover {
     background-color: #e9dcc8;
   }
 
-  .mobile-nav-bottom,
-  .mobile-nav-footer {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+  .mobile-nav-bottom {
+    margin-top: auto;
+    padding-top: 40px;
+    width: 100%;
     display: flex;
-    gap: 18px;
-    z-index: 1100;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .social-icons {
@@ -229,33 +237,17 @@
     gap: 20px;
   }
 
-  .social-icons svg {
-    height: 25px;
-    width: 25px;
-    color: black;
-    cursor: pointer;
+  .social-icons a {
+    color: #2d1b00;
+    font-size: 1.6rem;
+    transition: color 0.2s ease;
   }
 
-  .whatsapp-float,
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    height: 55px;
-    width: 55px;
-    background-color: #25d366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1100;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
+  .social-icons a:hover {
+    color: #000;
   }
 
-  .whatsapp-icon img,
-  .whatsapp-float img {
-    height: 28px;
-    width: 28px;
+  .mobile-order-button {
+    display: inline-block;
   }
 }

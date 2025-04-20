@@ -32,8 +32,10 @@ const HotBeverages = () => {
 
   return (
     <section className="menu-section" id="menu">
+      {/* Our Menu Title */}
+      <h2 className="menu-title">Our Menu</h2>
+
       <div className="menu-wrapper">
-        {/* Text Section */}
         <div className="menu-text-box">
           <h3 className="menu-heading">Hot Beverages</h3>
           {items.map((item, idx) => (
@@ -47,9 +49,8 @@ const HotBeverages = () => {
           ))}
         </div>
 
-        {/* Image Section */}
         <div className="menu-image-box">
-          <img src="/images/hot-beverage.jpg" alt="Hot Beverages" className="menu-img" />
+          <img src="/public/hot-beverage.jpg" alt="Hot Beverages" className="menu-img" />
           <span className="img-label">Hot Beverages</span>
         </div>
       </div>

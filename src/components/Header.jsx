@@ -1,6 +1,5 @@
 // src/components/Header.jsx
 import React, { useState, useEffect } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -53,19 +52,28 @@ function Header() {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''} ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`}>
+      {/* Left - Logo */}
       <div className="logo-container">
         <Link to="/" onClick={handleLinkClick}>
           <img src="/images/logo.png" alt="Dyu Art Cafe Logo" className="logo-image" />
         </Link>
       </div>
 
-      {/* Desktop Navigation */}
+      {/* Right - Hamburger Icon */}
+      {!isMobileMenuOpen && (
+        <button className="mobile-menu-toggle custom-hamburger" onClick={toggleMobileMenu} aria-label="Open mobile menu">
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+      )}
+
+      {/* Desktop Nav */}
       <nav className="navigation desktop-nav">
         <button className="nav-link" onClick={handleMenuClick}>Menu</button>
         <Link to="/gallery" className="nav-link" onClick={handleLinkClick}>Gallery</Link>
         <a
           href="https://www.swiggy.com/restaurants/dyu-art-cafe-koramangala-bangalore-263485"
-          className="order-button"
+          className="order-button desktop-only"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -73,14 +81,7 @@ function Header() {
         </a>
       </nav>
 
-      {/* Hamburger Icon */}
-      {!isMobileMenuOpen && (
-        <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Open mobile menu">
-          <GiHamburgerMenu size={28} />
-        </button>
-      )}
-
-      {/* Mobile Navigation */}
+      {/* Mobile Nav Drawer */}
       <nav className={`navigation mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-top">
           <Link to="/" onClick={handleLinkClick}>
@@ -123,14 +124,6 @@ function Header() {
               <FaFacebookF size={20} />
             </a>
           </div>
-          <a
-            href="https://wa.me/919739784704"
-            className="whatsapp-icon"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="/images/whatsapp.png" alt="WhatsApp" />
-          </a>
         </div>
       </nav>
     </header>
