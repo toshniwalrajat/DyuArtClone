@@ -1,0 +1,60 @@
+.about-cafe-wrapper {
+  background-color: #fef6e9;
+  padding: 2rem 1rem;
+  font-family: 'Roboto', sans-serif; /* Change the font family here */
+}
+
+.about-cafe-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-cafe-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.about-cafe-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-cafe-logo {
+  height: 80px; /* Increased the logo size */
+  margin-bottom: 1rem;
+}
+
+.about-cafe-text h2 {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-cafe-text p {
+  font-size: 1.1rem; /* Increased font size */
+  margin-bottom: 1rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+.location-heading {
+  font-weight: 600;
+}
+
+.explore-menu-btn {
+  margin-top: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}

@@ -1,6 +1,7 @@
 // src/App.jsx
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Header from './components/Header';
 import ImageSlider from './components/ImageSlider';
 import Gallery from './pages/GalleryPage';
@@ -19,9 +20,14 @@ import NonVegetarianBurgers from './components/Menu/NonVegetarianBurgers';
 import VegetarianSandwiches from './components/Menu/VegetarianSandwiches';
 import NonVegetarianSandwiches from './components/Menu/NonVegetarianSandwiches';
 import VegetarianPizzas from './components/Menu/VegetarianPizzas';
+import NonVegetarianPizzas from './components/Menu/NonVegetarianPizzas';
+import Desserts from './components/Menu/Desserts';
+
+import AboutCafe from './components/AboutCafe';
+import Footer from './components/Footer'; // Footer Import
 
 function App() {
-  const [loadRest, setLoadRest] = useState(false); // Single flag for all remaining content
+  const [loadRest, setLoadRest] = useState(false);
 
   return (
     <Router>
@@ -51,18 +57,29 @@ function App() {
                   <VegetarianSandwiches />
                   <NonVegetarianSandwiches />
                   <VegetarianPizzas />
+                  <NonVegetarianPizzas />
+                  <Desserts />
+                  <AboutCafe />
+                  <Footer /> {/* Footer shown at the end of homepage */}
                 </>
               )}
             </>
           }
         />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route
+          path="/gallery"
+          element={
+            <>
+              <Gallery />
+              <Footer /> {/* Footer visible in gallery as well */}
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
 }
 
-// "Load More" button
 function loadMoreBtn(onClick) {
   return (
     <div style={buttonWrapperStyle}>
@@ -76,7 +93,7 @@ function loadMoreBtn(onClick) {
 const buttonWrapperStyle = {
   textAlign: 'center',
   marginTop: '2rem',
-  padding: '0.1rem', // Padding for small screens
+  padding: '0.1rem',
 };
 
 const buttonStyle = {
@@ -89,10 +106,9 @@ const buttonStyle = {
   fontSize: '1rem',
   cursor: 'pointer',
   width: '80%',
-  maxWidth: '200px', // Prevents button from stretching too much
-  margin: '0 auto', // Center horizontally
+  maxWidth: '200px',
+  margin: '0 auto',
   display: 'block',
 };
-
 
 export default App;

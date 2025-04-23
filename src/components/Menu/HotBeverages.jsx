@@ -1,3 +1,4 @@
+// src/components/Menu/HotBeverages.jsx
 import React from 'react';
 import './HotBeverages.css';
 
@@ -32,8 +33,7 @@ const HotBeverages = () => {
 
   return (
     <section className="menu-section" id="menu">
-      {/* Our Menu Title */}
-      <h2 className="menu-title">Our Menu</h2>
+      <h2 className="menu-title" id="menu-section">Our Menu</h2>
 
       <div className="menu-wrapper">
         <div className="menu-text-box">
