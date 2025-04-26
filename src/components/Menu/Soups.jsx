@@ -47,7 +47,7 @@ const SoupsSection = () => {
         </div>
 
         <div className="menu-image-box">
-          <img src="/public/soups.jpg" alt="Soups" className="menu-img" />
+          <img src="/soups.jpg" alt="Soups" className="menu-img" />
           <span className="img-label">Soups</span>
         </div>
       </div>

@@ -42,7 +42,7 @@ const Desserts = () => {
         {/* Image Left */}
         <div className="menu-image-box">
           <img
-            src="/Desserts.avif" // make sure this path matches your public folder
+            src="/Desserts.jpg" // make sure this path matches your public folder
             alt="Desserts"
             className="menu-img"
           />

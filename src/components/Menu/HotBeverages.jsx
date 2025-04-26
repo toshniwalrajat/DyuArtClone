@@ -50,7 +50,7 @@ const HotBeverages = () => {
         </div>
 
         <div className="menu-image-box">
-          <img src="/public/hot-beverage.jpg" alt="Hot Beverages" className="menu-img" />
+          <img src="/hot-beverage.jpg" alt="Hot Beverages" className="menu-img" />
           <span className="img-label">Hot Beverages</span>
         </div>
       </div>

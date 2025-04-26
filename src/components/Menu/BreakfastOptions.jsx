@@ -1,6 +1,6 @@
 import React from 'react';
 import './HotBeverages.css'; // Reuse same styles
-import breakfastImg from '/public/BreakfastOptions.avif'; // Adjust if your path is different
+import breakfastImg from '/public/BreakfastOptions.jpg'; // Adjust if your path is different
 
 const BreakfastOptions = () => {
   const items = [

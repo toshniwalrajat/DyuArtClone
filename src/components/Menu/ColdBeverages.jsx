@@ -35,7 +35,7 @@ const ColdBeverages = () => {
       <div className="menu-wrapper">
         {/* Image First - on the Left */}
         <div className="menu-image-box">
-          <img src="/public/cold-beverage.jpg" alt="Cold Beverages" className="menu-img" />
+          <img src="/cold-beverage.jpg" alt="Cold Beverages" className="menu-img" />
           <span className="img-label">Cold Beverages</span>
         </div>
 
