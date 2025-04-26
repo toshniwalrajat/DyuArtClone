@@ -48,7 +48,7 @@ const Omelettes = () => {
         </div>
 
         <div className="menu-image-box">
-          <img src="/Omelettes.avif" alt="Omelettes" className="menu-img" />
+          <img src="/Omelettes.jpg" alt="Omelettes" className="menu-img" />
           <span className="img-label">Omelettes</span>
         </div>
       </div>

@@ -29,7 +29,7 @@ const Toasts = () => {
     <section className="menu-section">
       <div className="menu-wrapper reverse">
         <div className="menu-image-box">
-          <img src="/Toasts.avif" alt="Toasts" className="menu-img" />
+          <img src="/Toasts.jpg" alt="Toasts" className="menu-img" />
           <span className="img-label">Toasts</span>
         </div>
 

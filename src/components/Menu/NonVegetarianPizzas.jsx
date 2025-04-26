@@ -55,7 +55,7 @@ const NonVegetarianPizzas = () => {
         {/* Image Right */}
         <div className="menu-image-box">
           <img
-            src="/NonVegPizza.avif"
+            src="/NonVegPizza.jpg"
             alt="Non‑Vegetarian Pizzas"
             className="menu-img"
           />

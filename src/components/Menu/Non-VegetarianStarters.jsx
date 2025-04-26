@@ -39,7 +39,7 @@ const NonVegetarianStarters = () => {
       <div className="menu-wrapper reverse">
         <div className="menu-image-box">
           <img
-            src="/nonveg-starters.avif"
+            src="/nonveg-starters.jpg"
             alt="Non-Vegetarian Starters"
             className="menu-img"
           />
