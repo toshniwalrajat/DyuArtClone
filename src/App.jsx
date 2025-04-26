@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -27,8 +27,6 @@ import AboutCafe from './components/AboutCafe';
 import Footer from './components/Footer'; // Footer Import
 
 function App() {
-  const [loadRest, setLoadRest] = useState(false);
-
   return (
     <Router>
       <Header />
@@ -42,27 +40,20 @@ function App() {
               <ColdBeverages />
               <Soups />
               <Salads />
-
-              {!loadRest && loadMoreBtn(() => setLoadRest(true))}
-
-              {loadRest && (
-                <>
-                  <VegetarianStarters />
-                  <NonVegetarianStarters />
-                  <BreakfastOptions />
-                  <Toasts />
-                  <Omelettes />
-                  <VegetarianBurgers />
-                  <NonVegetarianBurgers />
-                  <VegetarianSandwiches />
-                  <NonVegetarianSandwiches />
-                  <VegetarianPizzas />
-                  <NonVegetarianPizzas />
-                  <Desserts />
-                  <AboutCafe />
-                  <Footer /> {/* Footer shown at the end of homepage */}
-                </>
-              )}
+              <VegetarianStarters />
+              <NonVegetarianStarters />
+              <BreakfastOptions />
+              <Toasts />
+              <Omelettes />
+              <VegetarianBurgers />
+              <NonVegetarianBurgers />
+              <VegetarianSandwiches />
+              <NonVegetarianSandwiches />
+              <VegetarianPizzas />
+              <NonVegetarianPizzas />
+              <Desserts />
+              <AboutCafe />
+              <Footer /> {/* Footer shown at the end of homepage */}
             </>
           }
         />
@@ -79,36 +70,5 @@ function App() {
     </Router>
   );
 }
-
-function loadMoreBtn(onClick) {
-  return (
-    <div style={buttonWrapperStyle}>
-      <button onClick={onClick} style={buttonStyle}>
-        Load More
-      </button>
-    </div>
-  );
-}
-
-const buttonWrapperStyle = {
-  textAlign: 'center',
-  marginTop: '2rem',
-  padding: '0.1rem',
-};
-
-const buttonStyle = {
-  padding: '0.6rem 2.5rem',
-  backgroundColor: '#000',
-  color: '#fff',
-  border: 'none',
-  borderRadius: '9999px',
-  fontWeight: '600',
-  fontSize: '1rem',
-  cursor: 'pointer',
-  width: '80%',
-  maxWidth: '200px',
-  margin: '0 auto',
-  display: 'block',
-};
 
 export default App;
