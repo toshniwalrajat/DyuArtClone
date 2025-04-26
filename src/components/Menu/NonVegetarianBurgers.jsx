@@ -40,7 +40,7 @@ const NonVegetarianBurgers = () => {
         {/* Image on Right */}
         <div className="menu-image-box">
           <img
-            src="/public/Non-VegetarianBurgers.jpg"
+            src="/Non-VegetarianBurgers.jpg"
             alt="Non‑Vegetarian Burgers"
             className="menu-img"
           />

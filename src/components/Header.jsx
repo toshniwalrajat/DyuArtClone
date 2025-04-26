@@ -71,14 +71,6 @@ function Header() {
       <nav className="navigation desktop-nav">
         <button className="nav-link" onClick={handleMenuClick}>Menu</button>
         <Link to="/gallery" className="nav-link" onClick={handleLinkClick}>Gallery</Link>
-        <a
-          href="https://www.swiggy.com/restaurants/dyu-art-cafe-koramangala-bangalore-263485"
-          className="order-button desktop-only"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Order Now
-        </a>
       </nav>
 
       {/* Mobile Nav Drawer */}
@@ -103,15 +95,6 @@ function Header() {
             onClick={handleLinkClick}
           >
             Get Direction
-          </a>
-          <a
-            href="https://www.swiggy.com/restaurants/dyu-art-cafe-koramangala-bangalore-263485"
-            className="order-button"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleLinkClick}
-          >
-            Order Now
           </a>
         </div>
 

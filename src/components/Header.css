@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 6px 20px; /* reduced padding */
   background-color: #fdfbf5;
   border-bottom: 1px solid transparent;
   position: sticky;
@@ -41,7 +41,7 @@
 }
 
 .logo-image {
-  height: 80px;
+  height: 60px; /* smaller logo */
   width: auto;
   object-fit: contain;
 }
@@ -53,14 +53,14 @@
 }
 
 .nav-link {
-  margin-left: 25px;
+  margin-left: 20px; /* tighter spacing */
   text-decoration: none;
   color: black;
   font-family: Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* slightly smaller text */
   font-weight: 700;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 4px 0;
   transition: color 0.2s ease;
   border: none;
   background: transparent;
@@ -73,26 +73,6 @@
   text-decoration: underline;
 }
 
-/* --- Desktop Order Button --- */
-.order-button {
-  margin-left: 30px;
-  padding: 10px 20px;
-  background-color: #f4eada;
-  border: 1px solid #d3c0a0;
-  border-radius: 25px;
-  cursor: pointer;
-  color: black;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-}
-
-.order-button:hover {
-  background-color: #e9dcc8;
-}
-
 /* --- Mobile Elements Hidden by Default --- */
 .mobile-menu-toggle,
 .mobile-nav,
@@ -103,11 +83,11 @@
 /* --- Mobile Specific Styling --- */
 @media (max-width: 768px) {
   .header {
-    padding: 10px 15px;
+    padding: 8px 15px; /* reduced mobile padding */
   }
 
   .logo-image {
-    height: 70px;
+    height: 55px; /* smaller mobile logo */
   }
 
   .desktop-nav {
@@ -119,19 +99,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
+    gap: 5px; /* tighter gap */
     background: none;
     border: none;
-    padding: 8px;
+    padding: 6px;
     cursor: pointer;
     z-index: 1011;
     margin-left: auto;
   }
 
   .custom-hamburger .bar {
-    width: 36px;
-    height: 4px;
-    background-color: #2d1b00; /* Dark brown */
+    width: 30px; /* smaller bars */
+    height: 3px;
+    background-color: #2d1b00;
     border-radius: 2px;
   }
 
@@ -164,21 +144,21 @@
   }
 
   .mobile-logo {
-    height: 70px;
+    height: 55px; /* smaller mobile logo */
     width: auto;
   }
 
   .mobile-menu-close {
     display: block;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
     outline: none;
     padding: 0;
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2rem; /* slightly smaller close button */
     line-height: 1;
     color: black;
     cursor: pointer;
@@ -187,15 +167,15 @@
   }
 
   .mobile-nav-links {
-    margin-top: 60px;
+    margin-top: 50px; /* slightly reduced margin */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 25px;
+    gap: 20px;
   }
 
   .mobile-nav .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* smaller nav link font */
     font-weight: 600;
     color: black;
     background: none;
@@ -204,28 +184,9 @@
     cursor: pointer;
   }
 
-  .mobile-nav .order-button {
-    margin-top: 30px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    background-color: #f4eada;
-    border: 1px solid #d3c0a0;
-    border-radius: 25px;
-    cursor: pointer;
-    color: black;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
-
-  .mobile-nav .order-button:hover {
-    background-color: #e9dcc8;
-  }
-
   .mobile-nav-bottom {
     margin-top: auto;
-    padding-top: 40px;
+    padding-top: 30px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -234,20 +195,16 @@
 
   .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 18px;
   }
 
   .social-icons a {
     color: #2d1b00;
-    font-size: 1.6rem;
+    font-size: 1.5rem; /* slightly smaller icons */
     transition: color 0.2s ease;
   }
 
   .social-icons a:hover {
     color: #000;
-  }
-
-  .mobile-order-button {
-    display: inline-block;
   }
 }

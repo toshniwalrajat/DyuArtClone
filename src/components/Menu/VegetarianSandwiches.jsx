@@ -35,7 +35,7 @@ const VegetarianSandwiches = () => {
         {/* Image on Right */}
         <div className="menu-image-box">
           <img
-            src="/public/VEGSandwich.jpg"
+            src="/Vegetarian-Sandwich.jpg"
             alt="Vegetarian Sandwiches"
             className="menu-img"
           />
